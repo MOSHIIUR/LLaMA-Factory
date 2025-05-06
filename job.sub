@@ -1,0 +1,19 @@
+
++SingularityImage = "osdf:///ospool/ap21/data/moshiur/sifs/osg_llamafactory.sif"
+
+request_cpus = 1
+request_gpus = 1
+request_memory = 20 GB
+request_disk = 10 GB
+
+gpus_minimum_capability = 8.0
+
+executable = run.sh
+
+transfer_input_files = ./
+
+Error = logs/$(Cluster).$(Process).error
+Output = logs/$(Cluster).$(Process).output
+Log = logs/$(Cluster).$(Process).log
+
+queue 1
